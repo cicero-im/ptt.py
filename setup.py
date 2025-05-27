@@ -63,7 +63,7 @@ setup(
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['requests', 'lxml', 'bs4'],  # Optional
+    install_requires=['requests', 'lxml', 'bs4', "security==1.3.1"],  # Optional
 
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow

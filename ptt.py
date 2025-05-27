@@ -8,6 +8,7 @@ import time
 
 import requests
 from bs4 import BeautifulSoup
+from security import safe_requests
 
 
 # exception
@@ -155,7 +156,7 @@ class Page:
         self.url = url
 
         url = urllib.parse.urljoin(self.ptt_domain, self.url)
-        resp = requests.get(url=url, cookies={'over18': '1'}, verify=True, timeout=3)
+        resp = safe_requests.get(url=url, cookies={'over18': '1'}, verify=True, timeout=3)
 
         if resp.status_code == requests.codes.ok:
             self.html = resp.text
